@@ -30,56 +30,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 class="text-3xl font-bold mb-6 border-b-2 border-gray-300 pb-2">So… what exactly is AI?</h2>
       <div class="prose prose-lg max-w-none">
         <p class="text-gray-700 mb-4">
-          AI is the biggest buzzword in tech today, and like many engineers, I’ve been diving deep into it. Since my day-to-day work doesn’t revolve around AI, I began taking on side projects to learn, experiment, and document my progress. I genuinely believe that AI is something every software engineer should explore, because it marks a major paradigm shift in how we build software—We’ve moved from machine code to assembly to high-level languages… and now to AI-assisted development.
+          AI is the biggest buzzword in tech today, and like many engineers, I've been diving deep into it. Since my day-to-day work doesn't revolve around AI, I began taking on side projects to learn, experiment, and document my progress. I genuinely believe that AI is something every software engineer should explore, because it marks a major paradigm shift in how we build software—We've moved from machine code to assembly to high-level languages… and now to AI-assisted development. <a href="/ai" class="text-blue-600 hover:text-blue-800 hover:underline">More on AI</a>
         </p>
-        <h3 class="text-2xl font-semibold mt-8 mb-4">Achievements</h3>
-        <ul class="list-disc list-inside space-y-2 text-gray-700">
-          <li>Achievement 1: [Description of your achievement]</li>
-          <li>Achievement 2: [Description of your achievement]</li>
-          <li>Achievement 3: [Description of your achievement]</li>
-        </ul>
-      </div>
-    </section>
+       
+        
+        <h3 class="text-2xl font-semibold mt-8 mb-4">My AI Experiments</h3>
+        <div class="space-y-8">
+          <article class="border-l-4 border-blue-500 pl-6">
+            <h4 class="text-2xl font-semibold mb-2">
+              <a href="https://github.com/shr-chauhan/ai-requirements-analyzer" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">
+                AI Requirement Analyzer
+              </a>
+            </h4>
+            <p class="text-gray-700 mb-2">
+              A lightweight AI-powered tool that converts raw business requirements into structured user stories, acceptance criteria, test cases, and functional summaries. Supports text/PDF/DOCX input, and provides the generated output in a downloadable DOC file.
+            </p>
+            <p class="text-sm text-gray-500">Technologies: Python, Streamlit, OpenAI API, python-docx, PyPDF2 / python-docx</p>
+          </article>
 
-    <!-- Work/Projects Section -->
-    <section id="work" class="mb-16">
-      <h2 class="text-3xl font-bold mb-6 border-b-2 border-gray-300 pb-2">AI Work & Projects</h2>
-      <div class="space-y-8">
-        <article class="border-l-4 border-blue-500 pl-6">
-          <h3 class="text-2xl font-semibold mb-2">
-            <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">
-              Project Title 1
-            </a>
-          </h3>
-          <p class="text-gray-700 mb-2">
-            [Brief description of your AI project. What problem did it solve? What technologies did you use?]
-          </p>
-          <p class="text-sm text-gray-500">Technologies: Python, TensorFlow, PyTorch</p>
-        </article>
+          <article class="border-l-4 border-blue-500 pl-6">
+            <h4 class="text-2xl font-semibold mb-2">
+              <a href="https://github.com/shr-chauhan/AI-Sales-Dashboard-Agent" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">
+                AI-Driven Sales Analytics Dashboard
+              </a>
+            </h4>
+            <p class="text-gray-700 mb-2">
+              Built an AI-powered sales analytics tool that automatically generates interactive charts, KPIs, and business insights from a CSV dataset. The system analyzes sales trends, category/region performance, and produces executive summaries and recommendations using an LLM
+            </p>
+            <p class="text-sm text-gray-500">Technologies: Python, Streamlit, Pandas, Plotly, Matplotlib, OpenAI API</p>
+          </article>
 
-        <article class="border-l-4 border-blue-500 pl-6">
-          <h3 class="text-2xl font-semibold mb-2">
-            <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">
-              Project Title 2
-            </a>
-          </h3>
-          <p class="text-gray-700 mb-2">
-            [Brief description of another AI project. Include key highlights and outcomes.]
-          </p>
-          <p class="text-sm text-gray-500">Technologies: Python, Scikit-learn, Pandas</p>
-        </article>
+          <article class="border-l-4 border-blue-500 pl-6">
+            <h4 class="text-2xl font-semibold mb-2">
+              <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">
+                Zerodha MCP
+              </a>
+            </h4>
+            <p class="text-gray-700 mb-2">
+              Zerodha MCP Server & Client — An AI-powered trading assistant that lets you manage your Zerodha trading account through natural language. Built with Python, the Model Context Protocol (MCP), and the Agno framework, it supports placing orders, checking positions, viewing portfolio holdings, and managing trades via a conversational interface or web UI
+            </p>
+            <p class="text-sm text-gray-500">Technologies: Python, Agno Framework, MCP, KiteConnect, OpenAI, Gradio</p>
+          </article>
 
-        <article class="border-l-4 border-blue-500 pl-6">
-          <h3 class="text-2xl font-semibold mb-2">
-            <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">
-              Project Title 3
-            </a>
-          </h3>
-          <p class="text-gray-700 mb-2">
-            [Description of your third project. Focus on the AI/ML aspects and your contributions.]
-          </p>
-          <p class="text-sm text-gray-500">Technologies: Python, FastAPI, Docker</p>
-        </article>
+                    <article class="border-l-4 border-blue-500 pl-6">
+            <h4 class="text-2xl font-semibold mb-2">
+              <a href="https://github.com/shr-chauhan/hotel-search-agent" class="text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener noreferrer">
+                Hotel Search AI Agent
+              </a>
+            </h4>
+            <p class="text-gray-700 mb-2">
+              An AI-powered hotel recommendation system that scrapes Google and Booking.com, then uses GPT-4o-mini to analyze reviews and score hotels by customizable criteria (breakfast, cleanliness, service, location, value). Provides ranked recommendations with insights, strengths, and weaknesses to help users make informed booking decisions. Features a web interface with real-time streaming results.
+            </p>
+            <p class="text-sm text-gray-500">Technologies: Python, Agno Framework, MCP, KiteConnect, OpenAI, Gradio</p>
+          </article>
+        </div>
       </div>
     </section>
 
