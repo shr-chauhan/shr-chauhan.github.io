@@ -46,7 +46,18 @@ def push(text):
 
 def record_user_details(email, name="Name not provided", notes="not provided"):
     """Record user contact information"""
-    push(f"Recording {name} with email {email} and notes {notes}")
+    # Validate email is provided
+    if not email or email.strip() == "":
+        email = "No email provided"
+    
+    # Format a more informative notification
+    notification_parts = [f"📧 New Contact: {email}"]
+    if name and name != "Name not provided" and name.strip():
+        notification_parts.append(f"Name: {name}")
+    if notes and notes != "not provided" and notes.strip():
+        notification_parts.append(f"\n💬 Conversation:\n{notes}")
+    
+    push("\n".join(notification_parts))
     return {"recorded": "ok"}
 
 def record_unknown_question(question):
@@ -57,13 +68,13 @@ def record_unknown_question(question):
 # OpenAI function definitions
 record_user_details_json = {
     "name": "record_user_details",
-    "description": "Use this tool to record that a user is interested in being in touch and provided an email address",
+    "description": "Use this tool to record that a user is interested in being in touch and provided an email address. Always include the user's message or a summary of the conversation in the notes field.",
     "parameters": {
         "type": "object",
         "properties": {
             "email": {"type": "string", "description": "The email address of this user"},
-            "name": {"type": "string", "description": "The user's name, if they provided it"},
-            "notes": {"type": "string", "description": "Any additional information about the conversation"}
+            "name": {"type": "string", "description": "The user's name, if they provided it. Use 'Name not provided' if the user didn't share their name."},
+            "notes": {"type": "string", "description": "The user's message or a brief summary of what they discussed. This should include the conversation context or the reason they're reaching out."}
         },
         "required": ["email"],
         "additionalProperties": False
@@ -120,12 +131,26 @@ class Me:
             print(f"Warning: {resume_path} not found.")
         except Exception as e:
             print(f"Warning: Could not load resume from DOCX: {e}")
+        
+        # Load work experience details
+        work_experience_path = me_dir / "work_experience.txt"
+        try:
+            with open(work_experience_path, "r", encoding="utf-8") as f:
+                self.work_experience = f.read().strip()
+            print(f"✅ Loaded work experience details ({len(self.work_experience)} characters)")
+        except FileNotFoundError:
+            print("Warning: me/work_experience.txt not found. Work experience details will not be available.")
+            self.work_experience = ""
+        except Exception as e:
+            print(f"Warning: Could not load work experience: {e}")
+            self.work_experience = ""
 
     def handle_tool_call(self, tool_calls):
         results = []
         for tool_call in tool_calls:
             tool_name = tool_call.function.name
             arguments = json.loads(tool_call.function.arguments)
+            print(f" these are the arguments: {arguments}")
             print(f"🔧 Tool called: {tool_name}", flush=True)
             tool = globals().get(tool_name)
             result = tool(**arguments) if tool else {}
@@ -134,6 +159,7 @@ class Me:
                 "content": json.dumps(result),
                 "tool_call_id": tool_call.id
             })
+            print(results)
         return results
     
     def system_prompt(self):
@@ -143,9 +169,15 @@ Your responsibility is to represent {self.name} for interactions on the website 
 You are given a summary of {self.name}'s background and resume which you can use to answer questions. \
 Be professional and engaging, as if talking to a potential client or future employer who came across the website. \
 If you don't know the answer to any question, use your record_unknown_question tool to record the question that you couldn't answer, even if it's about something trivial or unrelated to career. \
-If the user is engaging in discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool."""
+If the user is engaging in discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool. \
+When recording user details, always include the user's message or a summary of the conversation in the 'notes' parameter so {self.name} knows what they were interested in."""
 
         system_prompt += f"\n\n## Summary:\n{self.summary}\n\n## Resume:\n{self.resume}\n\n"
+        
+        # Add work experience if available
+        if hasattr(self, 'work_experience') and self.work_experience:
+            system_prompt += f"## Detailed Work Experience:\n{self.work_experience}\n\n"
+        
         system_prompt += f"With this context, please chat with the user, always staying in character as {self.name}."
         return system_prompt
     
@@ -167,6 +199,7 @@ If the user is engaging in discussion, try to steer them towards getting in touc
             if response.choices[0].finish_reason == "tool_calls":
                 message_obj = response.choices[0].message
                 tool_calls = message_obj.tool_calls
+                print(tool_calls)
                 results = self.handle_tool_call(tool_calls)
                 messages.append(message_obj)
                 messages.extend(results)

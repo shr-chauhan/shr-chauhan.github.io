@@ -1,0 +1,29 @@
+# Work Experience - Detailed Descriptions
+
+## Quantum
+At Quantum, I lead the engineering team responsible for the Unified Surveillance Platform (USP), the company’s flagship solution for large-scale video surveillance infrastructure. USP is intelligent software that delivers optimized hyperconverged infrastructure—bringing compute, storage, and networking together into a unified system specifically designed for the demanding requirements of video recording and analytics.
+
+I manage and mentor a 10-member engineering team in India while working closely with Quantum’s US-based storage team to build a tightly integrated compute–storage platform. My role spans engineering leadership, architectural decision-making, and hands-on technical contribution.
+
+I contributed significantly to the initial architecture and core components of USP and continue to drive key areas across system reliability, high availability, orchestration, and performance. I collaborate with cross-functional teams—product, QA, support, and field engineers—to ensure that USP deploys seamlessly across customer environments, from multi-node USP clusters to the single-node SmartNVR appliance.
+
+My responsibilities include defining engineering processes, aligning product priorities with business goals, improving system observability, and ensuring scalable deployments for mission-critical video surveillance workloads. I balance leadership with individual contribution, owning critical components and enabling the team to deliver high-quality, production-ready features.
+
+## Isomeds
+Isomeds was not a full-time role; I initially joined to help a former EnCloudEn co-founder who started the company after Quantum retained only the core engineering team. The technology for the e-pharmacy platform had been outsourced, but it faced significant architectural, performance, and operational challenges. I stepped in to support him technically, which gradually evolved into taking full ownership of the platform’s engineering.
+
+I designed and built the entire backend for Isomeds, including the APIs, database models, pricing and recommendation logic, authentication system, and integration with external medicine catalog services. I also contributed to parts of the React frontend and built major components of the Flutter mobile application, including search, OTP authentication, Razorpay integration, and prescription upload workflows.
+
+Beyond writing the product, I shaped the overall technical architecture for the D2C omni-channel model and ensured the platform was scalable, maintainable, and production-ready. The intent was for me to join as a co-founder as the company scaled, but Isomeds was shut down a few months after launch due to business and operational reasons.
+
+Despite the short timeline, Isomeds allowed me to apply full-stack ownership, product thinking, and hands-on engineering to build a complete e-pharmacy platform end-to-end.
+
+## EnCloudEn
+At EnCloudEn, I led the engineering organization responsible for building our suite of enterprise products, including our Hyperconverged Infrastructure (HCI) platform, private cloud solution, and VDI offering. I oversaw end-to-end product development—from architecture and design to implementation, deployment, and operational stability—while growing and mentoring a high-performing engineering team.
+
+I played a hands-on role in designing and building the core components of EnCloudEn’s HCI stack, leveraging OpenStack for compute and Ceph for storage. I also contributed heavily to our SPICE-based VDI solution, automation systems, monitoring framework, and the overall cloud management layer. My work spanned distributed systems, virtualization, storage integration, orchestration, performance engineering, and system reliability.
+
+Beyond engineering execution, I collaborated closely with founders, product teams, and customers to define the roadmap and translate real-world needs into scalable, production-ready features. I also streamlined engineering processes, improved release cycles, and established best practices around testing, observability, and deployment automation.
+
+My contributions were instrumental in shaping EnCloudEn’s technology and product direction, ultimately helping position the company for its successful acquisition by Quantum in 2021.
+
