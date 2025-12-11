@@ -12,8 +12,8 @@ export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Use environment variable for API URL, fallback to FastAPI backend
-  const API_URL = import.meta.env.PUBLIC_CHAT_API_URL || 'http://localhost:8000/chat';
+  // Use environment variable for API URL, fallback to Railway backend
+  const API_URL = import.meta.env.PUBLIC_CHAT_API_URL || 'https://shr-chauhangithubio-production.up.railway.app/chat';
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

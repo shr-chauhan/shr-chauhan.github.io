@@ -24,6 +24,8 @@ jobs:
           path: .
           node-version: 20
           package-manager: npm@latest
+        env:
+          PUBLIC_CHAT_API_URL: https://shr-chauhangithubio-production.up.railway.app/chat
 
   deploy:
     needs: build
