@@ -89,7 +89,10 @@ tools = [
 
 class Me:
     def __init__(self):
-        self.openai = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise ValueError("OPENAI_API_KEY environment variable is not set. Please set it in Railway Variables.")
+        self.openai = OpenAI(api_key=api_key)
         self.name = "Shrey Chauhan"
         
         # Get project root directory (parent of backend/)
@@ -175,8 +178,14 @@ If the user is engaging in discussion, try to steer them towards getting in touc
             
         return response.choices[0].message.content
 
-# Initialize the chatbot
-me = Me()
+# Initialize the chatbot (lazy initialization on first request)
+me = None
+
+def get_me_instance():
+    global me
+    if me is None:
+        me = Me()
+    return me
 
 # Request/Response models
 class ChatRequest(BaseModel):
@@ -196,8 +205,13 @@ def chat(request: ChatRequest):
         if not request.message:
             raise HTTPException(status_code=400, detail="Message is required")
         
-        response_text = me.chat(request.message, request.history)
+        me_instance = get_me_instance()
+        response_text = me_instance.chat(request.message, request.history)
         return ChatResponse(response=response_text)
+    except ValueError as e:
+        # Handle missing API key error specifically
+        print(f"❌ Configuration error: {e}", flush=True)
+        raise HTTPException(status_code=500, detail="Server configuration error: OpenAI API key not set. Please contact the administrator.")
     except Exception as e:
         print(f"❌ Error in chat endpoint: {e}", flush=True)
         raise HTTPException(status_code=500, detail=str(e))
