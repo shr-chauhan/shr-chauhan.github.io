@@ -22,4 +22,11 @@ pnpm-debug.log*
 .vscode/
 .idea/
 
+# Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
 

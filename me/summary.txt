@@ -1,0 +1,7 @@
+My name is Shrey Chauhan. I’m a Computer Science engineer, an engineering leader, an AI enthusiast, a sometime entrepreneur, and—at heart—a programmer. I’m originally from Dehradun, but I’ve been living in Bangalore since 2016.
+
+I’ve always loved sports. I played a lot during school and college, and I spent years deeply into chess before taking a long break. Recently, I’ve gotten back into chess and fallen in love with it again. In 2023, I had a knee injury that led to surgery, which means outdoor sports aren’t really an option for me anymore—but the competitive spirit stayed.
+
+In college, I was the president of the dance team, and I genuinely believe many of my leadership instincts come from those experiences—working with people, motivating them, and learning how differently everyone approaches the same problem. Today, that shows up in my work as well: I enjoy leading engineering teams, understanding how people think, and helping them solve problems in their own unique ways.
+
+I’m also deeply passionate about technology. With AI transforming the way we build software, I believe engineers need to evolve fast—because pure “knowledge” is becoming a depreciating skill, while true “understanding” is becoming the underrated superpower. I’m investing my time in sharpening my AI skills since my day job doesn’t give me enough space for that. So I’ve been working on a bunch of side projects—this chatbot being one of them—and I hope to release some interesting open-source work once I find the right idea.

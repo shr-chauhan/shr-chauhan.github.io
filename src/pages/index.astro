@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ChatBot from '../components/ChatBot';
 ---
 
 <BaseLayout title="Shrey Chauhan">
@@ -110,5 +111,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </footer>
   </main>
+  
+  <ChatBot client:load />
 </BaseLayout>
 
