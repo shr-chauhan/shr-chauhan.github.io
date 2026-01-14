@@ -11,18 +11,18 @@ import ChatBot from '../components/ChatBot';
       
       <img src="/profile.jpg" alt="Shrey Chauhan" class="w-32 h-32 rounded-full mb-6 object-cover ring-4 ring-slate-700" />
       <p class="text-lg text-gray-200">
-        Hi, I'm Shrey — a computer engineer. I currently run engineering for Quantum’s USP and, in my free time, explore AI because it’s rewriting the rules of software engineering. When I’m not building things, you’ll find me chasing some sport or the other.
+        Hi, I’m Shrey. I’m a computer engineer currently leading engineering for Quantum’s Unified Surveillance Platform (USP), a hyperconverged infrastructure solution designed for large-scale video surveillance. Alongside my day job, I actively explore applied AI, particularly where it intersects with distributed systems and developer productivity.
       </p>
       </br>
       <p class="text-lg text-gray-200">
-        I graduated from NIT Trichy in 2014 with a degree in Computer Science. During college, I led the dance team as its president, and many of my leadership qualities trace back to that experience. Navigating the team through victories, failures, and crises taught me resilience, responsibility, and how to inspire people.
+        Before Quantum, I was a founding engineer at EnCloudEn, where I helped build virtual desktop, private cloud, and HCI platforms from the ground up. I joined as the second engineer, grew into the Director of Engineering role, and led a 15-member team whose work ultimately formed the foundation for EnCloudEn’s acquisition by Quantum.
       </p>
       </br>
       <p class="text-lg text-gray-200">
-        I'm a Senior Engineering Manager at Quantum, where I lead the Unified Surveillance Platform (USP) engineering team. USP is Quantum's optimized hyperconverged infrastructure solution for large-scale video surveillance.
+        I graduated from NIT Trichy in 2014 with a degree in Computer Science. During college, I served as president of the dance team — an experience that shaped many of my leadership instincts. Leading through wins, losses, and high-pressure moments taught me resilience, accountability, and how to bring people together toward a common goal.
       </p>
       <p class="text-lg text-gray-200">
-        Before this, I was one of the founding engineers at EnCloudEn, where I led engineering for our virtual desktop, private cloud, and HCI platforms. I joined as the second engineer, became Director of Engineering, and helped grow a 15-member team that built the technology foundation that ultimately led to EnCloudEn's acquisition by Quantum.
+        When I’m not building or thinking about systems, you’ll usually find me chasing some sport or the other.
       </p>
     </header>
 
@@ -88,8 +88,55 @@ import ChatBot from '../components/ChatBot';
       </div>
     </section>
 
+    <!-- Open Source Projects Section -->
+    <section id="opensource" class="mb-16">
+      <h2 class="text-3xl font-bold mb-6 border-b-2 border-slate-600 pb-2 text-white">Open Source Projects</h2>
+      <div class="space-y-8">
+        <article class="border-l-4 border-green-500 pl-6 bg-slate-800/40 p-6 rounded-r-lg shadow-lg">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h4 class="text-2xl font-semibold mb-1">
+                <a href="https://github.com/shr-chauhan/stackwise" class="text-green-400 hover:text-green-300 hover:underline" target="_blank" rel="noopener noreferrer">
+                  StackWise
+                </a>
+              </h4>
+              <p class="text-sm text-gray-300 font-medium">Open Source AI Debugging Platform</p>
+            </div>
+            <span class="text-xs text-gray-400 bg-slate-700 px-2 py-1 rounded">2025</span>
+          </div>
+          <p class="text-sm text-gray-300 mb-6">Creator & Maintainer</p>
+          
+          <div class="space-y-5">
+            <div>
+              <h5 class="text-lg font-semibold text-white mb-2">Why I built it</h5>
+              <p class="text-gray-200">
+                While building the backend for my startup, production bugs were often discovered only after customer reports due to limited observability, leading to slow and reactive debugging.
+              </p>
+            </div>
 
-    
+            <div>
+              <h5 class="text-lg font-semibold text-white mb-2">What I built</h5>
+              <p class="text-gray-200">
+                I started with a lightweight mechanism to capture and persist stack traces on runtime errors, prioritizing fast feedback and minimal integration overhead for an early-stage product. This evolved into a full error ingestion platform with structured storage, querying, and alerting capabilities. On top of this foundation, I integrated an AI-driven analysis pipeline that performs first-level debugging using stack traces and selectively fetched source code from Git.
+              </p>
+            </div>
+
+            <div>
+              <h5 class="text-lg font-semibold text-white mb-2">What it is today</h5>
+              <p class="text-gray-200">
+                StackWise is an open-source, self-hosted alternative to traditional error monitoring tools, designed for teams that want full control over their data and infrastructure. The project is currently maintained and developed independently.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-700">
+            <a href="https://github.com/shr-chauhan/stackwise" class="text-green-400 hover:text-green-300 hover:underline text-sm font-medium inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <!-- Blog Section -->
     <section id="blog" class="mb-16">
@@ -109,9 +156,7 @@ import ChatBot from '../components/ChatBot';
         <a href="https://github.com/shr-chauhan" class="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/shrey-chauhan" class="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
-      <p class="mt-4 text-sm text-gray-500">
-        © 2024 Your Name. All rights reserved.
-      </p>
+   
     </footer>
   </main>
   
