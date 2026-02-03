@@ -6,16 +6,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <main class="max-w-4xl mx-auto px-6 py-12">
     <!-- Back to Home Link -->
     <div class="mb-8">
-      <a href="/" class="text-blue-600 hover:text-blue-800 hover:underline">← Back to Home</a>
+      <a href="/" class="text-blue-400 hover:text-blue-300 hover:underline">← Back to Home</a>
     </div>
 
     <!-- Blog Post Content -->
     <article>
       <header class="mb-12">
-        <h1 class="text-4xl font-bold mb-4">Why Every Software Engineer Should Learn AI — Even If It Feels Overwhelming</h1>
+        <h1 class="text-4xl font-bold mb-4 text-white">Why Every Software Engineer Should Learn AI — Even If It Feels Overwhelming</h1>
       </header>
 
-      <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+      <div class="prose prose-lg max-w-none text-gray-200 leading-relaxed">
         <p class="text-lg mb-6">
           Artificial Intelligence is evolving at a pace we've never seen before. New frameworks, new techniques, new abstractions — sometimes things get deprecated within weeks. As an engineer, this can feel intimidating. You learn something today, and ten days later it changes.
         </p>
@@ -28,7 +28,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           The earlier you learn and experiment, the stronger your foundational intuition becomes. Tools and APIs may change, but the underlying concepts — reasoning, embeddings, context, constraints, architecture — remain. AI rewards early adopters. Once you understand the fundamentals, you're never "starting from scratch" again.
         </p>
 
-        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-gray-300 pb-2">1. Start Early, Build Fundamentals, Expect Deprecation</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-slate-600 pb-2 text-white">1. Start Early, Build Fundamentals, Expect Deprecation</h2>
         <p class="mb-4">
           The first thing to accept is that AI moves fast. Almost too fast. But that shouldn't be a reason to avoid learning it — it's a reason to start now.
         </p>
@@ -36,7 +36,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           When fundamentals are clear, deprecations don't scare you. In fact, you'll often welcome them because new tools simply make existing ideas easier. Early experimentation builds the intuition needed to make AI work for you, not the other way around.
         </p>
 
-        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-gray-300 pb-2">2. Don't Fear the Buzzwords — Start Small and Build Through Projects</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-slate-600 pb-2 text-white">2. Don't Fear the Buzzwords — Start Small and Build Through Projects</h2>
         <p class="mb-4">
           Vector DBs, RAG, MCP, LangGraph, LangChain, LLMs, embeddings, tokens, agents…
         </p>
@@ -65,7 +65,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           Start small → experiment → build intuition → go deeper.
         </p>
 
-        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-gray-300 pb-2">3. But Don't Let AI Become a Brain Replacement</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-slate-600 pb-2 text-white">3. But Don't Let AI Become a Brain Replacement</h2>
         <p class="mb-4">
           There's a trap many engineers fall into: outsourcing their thinking to an LLM.
         </p>
@@ -88,7 +88,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           Use AI as a partner, not an autopilot.
         </p>
 
-        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-gray-300 pb-2">4. Use AI Code Assistants the Right Way</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-slate-600 pb-2 text-white">4. Use AI Code Assistants the Right Way</h2>
         <p class="mb-4">
           This is a strong opinion, but one I believe in deeply:
         </p>
@@ -96,13 +96,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           AI should behave like a junior developer, not the tech lead.
         </p>
         <p class="mb-4">
-          <strong>For fresh graduates:</strong>
+          <strong class="text-white">For fresh graduates:</strong>
         </p>
         <p class="mb-4">
           Learn AI early, but avoid overusing coding assistants. Write code yourself. Build mental models. Don't let AI steal your learning phase.
         </p>
         <p class="mb-4">
-          <strong>For senior engineers:</strong>
+          <strong class="text-white">For senior engineers:</strong>
         </p>
         <p class="mb-4">
           Use AI smartly — not blindly.
@@ -110,7 +110,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="mb-4">
           Great use cases are well-defined, scoped tasks like:
         </p>
-        <ul class="list-disc list-inside mb-4 space-y-2 ml-4">
+        <ul class="list-disc list-inside mb-4 space-y-2 ml-4 text-gray-200">
           <li>Generating clean utility functions</li>
           <li>Converting boilerplate</li>
           <li>Writing tests</li>
@@ -119,7 +119,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="mb-4">
           But avoid using AI for:
         </p>
-        <ul class="list-disc list-inside mb-6 space-y-2 ml-4">
+        <ul class="list-disc list-inside mb-6 space-y-2 ml-4 text-gray-200">
           <li>Abstract business logic</li>
           <li>Entire architecture design</li>
           <li>Authentication flows</li>
@@ -128,21 +128,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="mb-4">
           Design first. Think first. Then instruct AI clearly:
         </p>
-        <p class="mb-4 font-mono bg-gray-100 p-3 rounded">
+        <p class="mb-4 font-mono bg-slate-800 text-gray-200 p-3 rounded border border-slate-700">
           "Write this function. It takes X as input, returns Y, and must do Z."
         </p>
         <p class="mb-6">
           That is engineering leadership.
         </p>
 
-        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-gray-300 pb-2">5. AI Helps You Solve Problems You Didn't Realize Were AI Problems</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-slate-600 pb-2 text-white">5. AI Helps You Solve Problems You Didn't Realize Were AI Problems</h2>
         <p class="mb-4">
           Here's a real example.
         </p>
         <p class="mb-4">
           Someone once asked me about a problem they faced while building an e-pharmacy. They had a "master list" of medicines in PostgreSQL. Every distributor had different naming conventions:
         </p>
-        <ul class="list-disc list-inside mb-4 space-y-2 ml-4">
+        <ul class="list-disc list-inside mb-4 space-y-2 ml-4 text-gray-200">
           <li>Dolo 500mg tablet</li>
           <li>Dolo 500 tab</li>
           <li>Dolo 500mg t</li>
@@ -159,7 +159,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="mb-4">
           I should have:
         </p>
-        <ul class="list-disc list-inside mb-4 space-y-2 ml-4">
+        <ul class="list-disc list-inside mb-4 space-y-2 ml-4 text-gray-200">
           <li>Used a vector database to embed all medicine names</li>
           <li>Performed semantic search</li>
           <li>Used an LLM to choose the best candidate among the matches</li>
@@ -177,7 +177,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           Sometimes the right solution only appears when you understand the new tools.
         </p>
 
-        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-gray-300 pb-2">6. AI Is Bigger Than Code — It's Changing Entire Industries</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-slate-600 pb-2 text-white">6. AI Is Bigger Than Code — It's Changing Entire Industries</h2>
         <p class="mb-4">
           People often reduce AI to "just a coding assistant."
         </p>
@@ -187,12 +187,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="mb-4">
           AI is transforming:
         </p>
-        <ul class="list-disc list-inside mb-4 space-y-2 ml-4">
-          <li><strong>Healthcare</strong> — diagnosing diseases more accurately than humans</li>
-          <li><strong>Chess/Go</strong> — redefining what "good moves" even mean</li>
-          <li><strong>Marketing</strong> — generating entire campaigns in minutes</li>
-          <li><strong>Media</strong> — creating art, video, and content at scale</li>
-          <li><strong>Operations</strong> — automating what once needed entire teams</li>
+        <ul class="list-disc list-inside mb-4 space-y-2 ml-4 text-gray-200">
+          <li><strong class="text-white">Healthcare</strong> — diagnosing diseases more accurately than humans</li>
+          <li><strong class="text-white">Chess/Go</strong> — redefining what "good moves" even mean</li>
+          <li><strong class="text-white">Marketing</strong> — generating entire campaigns in minutes</li>
+          <li><strong class="text-white">Media</strong> — creating art, video, and content at scale</li>
+          <li><strong class="text-white">Operations</strong> — automating what once needed entire teams</li>
         </ul>
         <p class="mb-4">
           AI is not optional anymore.
@@ -204,7 +204,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           The earlier you embrace it, the more future-proof your engineering career becomes.
         </p>
 
-        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-gray-300 pb-2">Final Thoughts</h2>
+        <h2 class="text-3xl font-bold mt-12 mb-6 border-b-2 border-slate-600 pb-2 text-white">Final Thoughts</h2>
         <p class="mb-4">
           AI is not a replacement for engineers.
         </p>
