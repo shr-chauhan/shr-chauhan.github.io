@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="StackWise — Open Source AI Debugging Platform">
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <div class="mb-8">
+      <a href="/" class="text-blue-400 hover:text-blue-300 hover:underline">← Back to Home</a>
+    </div>
+
+    <article>
+      <header class="mb-10">
+        <div class="flex items-start justify-between mb-2">
+          <h1 class="text-4xl font-bold text-white">StackWise</h1>
+          <span class="text-xs text-gray-400 bg-slate-700 px-2 py-1 rounded mt-2">2025</span>
+        </div>
+        <p class="text-lg text-gray-300 font-medium mb-2">Open Source AI Debugging Platform</p>
+        <p class="text-sm text-gray-400">Creator & Maintainer</p>
+      </header>
+
+      <div class="space-y-8 text-gray-200 leading-relaxed">
+        <div>
+          <h2 class="text-2xl font-semibold text-white mb-3 border-b border-slate-700 pb-2">Why I built it</h2>
+          <p>
+            While building the backend for my startup, production bugs were often discovered only after customer reports due to limited observability, leading to slow and reactive debugging.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-semibold text-white mb-3 border-b border-slate-700 pb-2">What I built</h2>
+          <p>
+            I started with a lightweight mechanism to capture and persist stack traces on runtime errors, prioritizing fast feedback and minimal integration overhead for an early-stage product. This evolved into an error ingestion and debugging platform with structured storage and filtered retrieval of error events. On top of this foundation, I integrated an AI-driven analysis pipeline that performs first-level debugging using stack traces and selectively fetched source code from Git.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-semibold text-white mb-3 border-b border-slate-700 pb-2">What it is today</h2>
+          <p class="mb-3">
+            StackWise is an open-source, self-hosted debugging tool focused on helping small teams and individual developers reason about production errors more effectively. Rather than replacing full observability stacks, it complements them by reducing the manual effort required to understand and triage recurring failures.
+          </p>
+          <p>
+            The project is currently maintained and developed independently.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-semibold text-white mb-3 border-b border-slate-700 pb-2">Future direction</h2>
+          <p class="mb-3">
+            StackWise is designed with extensibility in mind. Possible future directions include:
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-4">
+            <li>Automatically creating issue tracker tickets (e.g., Jira/GitHub Issues) from analyzed errors</li>
+            <li>Generating AI-assisted fix suggestions or patch branches for human review</li>
+            <li>Adding intelligent alerting with autonomous error grouping and labeling</li>
+            <li>Expanding context ingestion to include logs, metrics, and historical patterns</li>
+          </ul>
+          <p class="mt-3">
+            These ideas build on the existing ingestion and analysis foundation while keeping the system developer-centric and self-hosted.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-slate-700">
+        <a href="https://github.com/shr-chauhan/stackwise" class="text-green-400 hover:text-green-300 hover:underline text-sm font-medium" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+    </article>
+  </main>
+</BaseLayout>

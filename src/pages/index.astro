@@ -91,68 +91,39 @@ import ChatBot from '../components/ChatBot';
 
     <!-- Open Source Projects Section -->
     <section id="opensource" class="mb-16">
-      <h2 class="text-3xl font-bold mb-6 border-b-2 border-slate-600 pb-2 text-white">Open Source Project</h2>
-      <div class="space-y-8">
+      <h2 class="text-3xl font-bold mb-6 border-b-2 border-slate-600 pb-2 text-white">Open Source Projects</h2>
+      <div class="space-y-4">
         <article class="border-l-4 border-green-500 pl-6 bg-slate-800/40 p-6 rounded-r-lg shadow-lg">
-          <div class="flex items-start justify-between mb-4">
+          <div class="flex items-start justify-between mb-2">
             <div>
-              <h4 class="text-2xl font-semibold mb-1">
-                <a href="https://github.com/shr-chauhan/stackwise" class="text-green-400 hover:text-green-300 hover:underline" target="_blank" rel="noopener noreferrer">
-                  StackWise
-                </a>
-              </h4>
+              <h4 class="text-xl font-semibold mb-1 text-white">StackWise</h4>
               <p class="text-sm text-gray-300 font-medium">Open Source AI Debugging Platform</p>
             </div>
             <span class="text-xs text-gray-400 bg-slate-700 px-2 py-1 rounded">2025</span>
           </div>
-          <p class="text-sm text-gray-300 mb-6">Creator & Maintainer</p>
-          
-          <div class="space-y-5">
-            <div>
-              <h5 class="text-lg font-semibold text-white mb-2">Why I built it</h5>
-              <p class="text-gray-200">
-                While building the backend for my startup, production bugs were often discovered only after customer reports due to limited observability, leading to slow and reactive debugging.
-              </p>
-            </div>
-
-            <div>
-              <h5 class="text-lg font-semibold text-white mb-2">What I built</h5>
-              <p class="text-gray-200">
-                I started with a lightweight mechanism to capture and persist stack traces on runtime errors, prioritizing fast feedback and minimal integration overhead for an early-stage product. This evolved into an error ingestion and debugging platform with structured storage and filtered retrieval of error events. On top of this foundation, I integrated an AI-driven analysis pipeline that performs first-level debugging using stack traces and selectively fetched source code from Git.
-              </p>
-            </div>
-
-            <div>
-              <h5 class="text-lg font-semibold text-white mb-2">What it is today</h5>
-              <p class="text-gray-200 mb-3">
-                StackWise is an open-source, self-hosted debugging tool focused on helping small teams and individual developers reason about production errors more effectively. Rather than replacing full observability stacks, it complements them by reducing the manual effort required to understand and triage recurring failures.
-              </p>
-              <p class="text-gray-200">
-                The project is currently maintained and developed independently.
-              </p>
-            </div>
-
-            <div>
-              <h5 class="text-lg font-semibold text-white mb-2">Future direction</h5>
-              <p class="text-gray-200 mb-3">
-                StackWise is designed with extensibility in mind. Possible future directions include:
-              </p>
-              <ul class="list-disc list-inside space-y-2 text-gray-200 ml-4">
-                <li>Automatically creating issue tracker tickets (e.g., Jira/GitHub Issues) from analyzed errors</li>
-                <li>Generating AI-assisted fix suggestions or patch branches for human review</li>
-                <li>Adding intelligent alerting with autonomous error grouping and labeling</li>
-                <li>Expanding context ingestion to include logs, metrics, and historical patterns</li>
-              </ul>
-              <p class="text-gray-200 mt-3">
-                These ideas build on the existing ingestion and analysis foundation while keeping the system developer-centric and self-hosted.
-              </p>
-            </div>
+          <p class="text-gray-200 mt-3 mb-4">
+            A self-hosted debugging tool that captures production stack traces and runs an AI-driven analysis pipeline to perform first-level triage — reducing the manual effort required to understand and resolve recurring failures.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="/stackwise" class="text-green-400 hover:text-green-300 hover:underline text-sm font-medium">Read more →</a>
+            <a href="https://github.com/shr-chauhan/stackwise" class="text-gray-400 hover:text-gray-300 hover:underline text-sm" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
+        </article>
 
-          <div class="mt-6 pt-4 border-t border-slate-700">
-            <a href="https://github.com/shr-chauhan/stackwise" class="text-green-400 hover:text-green-300 hover:underline text-sm font-medium inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
-              View on GitHub →
-            </a>
+        <article class="border-l-4 border-green-500 pl-6 bg-slate-800/40 p-6 rounded-r-lg shadow-lg">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="text-xl font-semibold mb-1 text-white">TARS</h4>
+              <p class="text-sm text-gray-300 font-medium">AI Engineering Assistant for Microsoft Teams</p>
+            </div>
+            <span class="text-xs text-gray-400 bg-slate-700 px-2 py-1 rounded">2025</span>
+          </div>
+          <p class="text-gray-200 mt-3 mb-4">
+            A self-hosted Teams bot that connects Linear, GitHub, and Microsoft Graph into a single conversational interface — so you can query your sprint, PRs, inbox, and calendar without leaving Teams.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="/tars" class="text-green-400 hover:text-green-300 hover:underline text-sm font-medium">Read more →</a>
+            <a href="https://github.com/shr-chauhan/tars" class="text-gray-400 hover:text-gray-300 hover:underline text-sm" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
         </article>
       </div>
